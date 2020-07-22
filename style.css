@@ -1,0 +1,27 @@
+
+h1{
+    text-align: center;
+    font-family: monospace;
+    color: purple;
+    font-size: 72;
+}
+
+
+.boxed{
+   width: 250px;
+   height: auto;
+   border: 7px solid pink;
+   margin: auto;
+   padding: 1px 1px;
+}
+
+img{
+    width: 250;
+    height: auto;
+    text-align: center;
+}
+
+.img-with-text{
+    text-align: justify;
+    width: [width of img];
+}
