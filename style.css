@@ -4,7 +4,7 @@ body{
 h1{
     text-align: center;
     font-family: monospace;
-    color: purple;
+    color:white;
     font-size: 72;
 }
 
@@ -17,13 +17,3 @@ h1{
    padding: 1px 1px;
 }
 
-img{
-    width: 250;
-    height: auto;
-    text-align: center;
-}
-
-.img-with-text{
-    text-align: justify;
-    width: [width of img];
-}
