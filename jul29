@@ -1,0 +1,93 @@
+<div class="todo-cont">
+  <h1>Todo List App</h1>
+  <hr class="divider"/>
+  <input type="text" id="todoInput" name="todoInput">
+  <button type="submit" onclick="addTodo()">Submit</button>
+  <div class="todoList-cont">
+    <h4>Todo List:</h4>
+    <ul class="todoList">
+    </ul>
+  </div>
+</div>
+
+body {
+  background-color: pink;
+}
+h1{
+  color: tomato;
+   font-style: italic;
+}
+.todo-cont {
+  margin: 0 auto;
+  width: 40%;
+  text-align: center;
+  border: 1px solid black;
+}
+button{
+border-radius: 25px;
+color: tomato;
+background-color: pink;
+}
+
+.divider {
+  margin-bottom: 3rem;
+}
+
+.todoList {
+  min-height: 3rem;
+  background: white;
+  border-radius: 25px;
+  margin: 1rem;
+}
+
+.todoList-cont {
+  text-align: left;
+  font-style: italic;
+}
+
+.todoList-cont h4 {
+  margin-left: 1rem;
+  text-align: center;
+  color: tomato;
+}
+
+.todoList {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.li_btn {
+  float: right;
+  margin-right: 1rem;
+  border-radius: 25px;
+
+}
+.newLi{
+color: tomato;
+}
+
+
+function addTodo() {
+  // TODO : get the ID 'todoInput'
+  const todoText = document.getElementById('todoInput').value;
+  
+  // create new elements to add
+  let newLI = document.createElement('li');
+  let textNode = document.createTextNode(todoText);
+  let button = document.createElement('button');
+  
+  // add attributes and prep elements
+  newLI.setAttribute('class', 'newLi')
+  button.innerHTML = "Delete";
+  button.setAttribute("class","li_btn")
+  
+  // TODO : APPEND THE BUTTON TO THE LI
+  newLI.appendChild(textNode);
+  newLI.appendChild(button)
+  
+  //append to List
+  document.querySelector('.todoList').appendChild(newLI);
+
+  // TODO : CLEAR THE INPUT AFTER SUBMIT
+  document.getElementById('todoInput').value = null;
+}
